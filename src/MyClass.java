@@ -18,6 +18,7 @@ public class MyClass {
 
 }
 class Car{
+    GasTank tank;
     Position position  = new Position();
     String Make;
     String Model;
@@ -36,6 +37,9 @@ class Car{
         engine.gasPedal(1,position);
         return true;
     }
+
+}
+class CarInterface {
 
 }
 class Engine{
@@ -57,7 +61,25 @@ class Engine{
 
 
 }
+class GasTank{
+    double gasTankCapacity = 100;
+    double currentGas = 50;
+    public double getGasTankCapacity() {
+        return gasTankCapacity;
+    }
+    public double getCurrentGas() {
+        return currentGas;
+    }
+    public void setGasTankCapacity(double gasTankCapacity) {
+        this.gasTankCapacity = gasTankCapacity;
+    }
+    public void setCurrentGas(double currentGas) {
+        this.currentGas = currentGas;
+    }
 
+
+
+}
 class Battery{
     double voltage;
     public boolean ValidBattery(){
